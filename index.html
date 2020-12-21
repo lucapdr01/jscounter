@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-grid.min.js"></script>
+  <title>Counter</title>
+</head>
+<body>
+<div class="container">
+  <div class="text-center">
+<h1 class="display-4">Basic Javascript Counter</h1>
+
+  <h3 class="display-3" id="result">0</h3>
+  <button id="pbt" class="btn btn-outline-success" onclick="add()">+</button>
+  <button id="minbt" class="btn btn-outline-danger" onclick="subtract()">-</button>
+  <p></p>
+   <button id="pbt" class="btn btn-outline-success" onclick="mult()"> x2</button>
+  <button id="minbt" class="btn btn-outline-danger" onclick="divide()">x0.5</button>
+</div>
+</div>
+
+
+<script>
+
+	var plusBt = document.getElementById("pbt");
+	var minBt = document.getElementById("minbt");
+ 
+	var result = document.getElementsByTagName("h3")[0];
+ 
+	function add()
+	{
+		var res = parseFloat(result.textContent) + 1;
+		result.textContent = res;
+		
+	}
+	function subtract()
+	{
+		var res = parseFloat(result.textContent) - 1;
+		result.textContent = res;
+	}
+	function mult()
+	{
+		var res = parseFloat(result.textContent) * 2;
+		result.textContent = res;
+	}
+	function divide()
+	{
+		var res = parseFloat(result.textContent)/ 2;
+		result.textContent = parseFloat(res).toFixed(2);
+	}
+ 
+	
+</script>
+</body>
+</html>
